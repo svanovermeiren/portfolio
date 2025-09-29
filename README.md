@@ -3,7 +3,7 @@
 This is my personal portfolio website built with React, showcasing my engineering projects and experience.
 
 ## Live Site
-🌐 **https://svanover.xyz** (coming soon!)
+🌐 **https://svanover.xyz** (deploying now!)
 
 ## Features
 - Responsive design
