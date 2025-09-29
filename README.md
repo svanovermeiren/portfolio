@@ -1,4 +1,4 @@
-# Steven Vanovermeiren - Portfolio Website
+# My Portfolio Website
 
 This is my personal portfolio website built with React, showcasing my engineering projects and experience.
 
