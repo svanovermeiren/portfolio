@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FaLinkedin } from 'react-icons/fa';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -39,8 +39,8 @@ function Home() {
           finite element analysis, and manufacturing, and I am most interested in contributing to fast-paced, mission-orented companies in the automotive and aerospace industries.
         </p>
         <div className="button-container">
-          <a href="/projects" className="projects-button">View My Projects</a>
-          <a href="/resume" className="resume-button">Resume</a>
+          <Link to="/projects" className="projects-button">View My Projects</Link>
+          <Link to="/resume" className="resume-button">Resume</Link>
         </div>
         <div className="social-buttons">
           <a
