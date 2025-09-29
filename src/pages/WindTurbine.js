@@ -1,33 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import ImageModal from '../components/ImageModal';
 import './Projects.css';
 
 function WindTurbine() {
-  const [modalState, setModalState] = useState({
-    isOpen: false,
-    imageSrc: '',
-    imageAlt: '',
-    imageCaption: ''
-  });
-
-  const openModal = (src, alt, caption) => {
-    setModalState({
-      isOpen: true,
-      imageSrc: src,
-      imageAlt: alt,
-      imageCaption: caption
-    });
-  };
-
-  const closeModal = () => {
-    setModalState({
-      isOpen: false,
-      imageSrc: '',
-      imageAlt: '',
-      imageCaption: ''
-    });
-  };
 
   return (
     <div className="project-detail-page">
@@ -161,14 +136,6 @@ function WindTurbine() {
           </div>
         </div>
       </div>
-      
-      <ImageModal
-        isOpen={modalState.isOpen}
-        imageSrc={modalState.imageSrc}
-        imageAlt={modalState.imageAlt}
-        imageCaption={modalState.imageCaption}
-        onClose={closeModal}
-      />
     </div>
   );
 }
