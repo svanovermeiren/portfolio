@@ -87,3 +87,6 @@ jspm_packages/
 
 # AppData and system files
 AppData/
+AppData/
+**/AppData/
+**/AppData/**
