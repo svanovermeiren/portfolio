@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+.projects-page {
+  padding: 0.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Montserrat', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.projects-page h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+}
+
+.project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card.clickable {
+  cursor: pointer;
+}
+
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Fine-tune crop for ASU Solar Car Mechanical Systems card preview */
+.project-image img.mechanical-systems-card-image {
+  object-position: center 55%;
+}
+
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.project-content p {
+  color: #666;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-label {
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.skill-label:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-page {
+    padding: 1rem;
+  }
+}
+
+/* Detailed Project Page Styles */
+.project-detail-page {
+  padding: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.project-detail-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+.project-subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+/* Project Image Gallery Styles */
+.project-image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Single large image styling */
+.project-image-gallery:has(.gallery-image-container:only-child) {
+  justify-content: center;
+}
+
+.project-image-gallery:has(.gallery-image-container:only-child) .gallery-image {
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image-container {
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-image-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
+.project-detail-content {
+  padding: 0;
+}
+
+.project-overview {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-overview h2 {
+  color: #1F2937;
+  margin: 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  text-align: left;
+}
+
+.project-overview p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Special layout for Process and Tools/Technologies Used sections */
+.detail-section.process-section,
+.detail-section.tools-section {
+  display: inline-block;
+  width: calc(50% - 1rem);
+  vertical-align: top;
+  margin-bottom: 2rem;
+}
+
+.detail-section.process-section {
+  margin-right: 1rem;
+}
+
+.detail-section.tools-section {
+  margin-left: 1rem;
+}
+
+/* Container for the side-by-side sections */
+.side-by-side-container {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detail-section h3 {
+  color: #1F2937;
+  margin: 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  text-align: left;
+}
+
+.detail-section ul {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  padding: 0 1.5rem 1.5rem 2.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+.detail-section li {
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.detail-section p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  margin: 0;
+}
+
+.skill-tag {
+  background: #f5e6e8;
+  color: #8C1D40;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .project-detail-page {
+    padding: 1rem;
+  }
+  
+  .project-detail-content {
+    padding: 1.5rem;
+  }
+  
+  .skills-grid {
+    gap: 0.5rem;
+  }
+  
+  .project-image-gallery {
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .gallery-image {
+    width: 250px;
+    height: 167px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-image-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .gallery-image {
+    width: 280px;
+    height: 187px;
+  }
+}
+
+/* System Divider Styles */
+.system-divider {
+  margin: 4rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  border: 1px solid #dee2e6;
+}
+
+.divider-image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.divider-image-gallery .gallery-image-container {
+  flex: 0 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.divider-image-gallery .gallery-image-container:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.divider-image-gallery .gallery-image {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.divider-image-gallery 
+.system-introduction-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.system-introduction-card h3 {
+  color: #1F2937;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.system-introduction-card p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Mechanical System Section Styles */
+.mechanical-system-section {
+  margin-bottom: 3rem;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.mechanical-system-section h2 {
+  color: #1F2937;
+  margin: 0 0 2rem 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Ensure no outer container styling for mechanical systems */
+.mechanical-system-section .project-image-gallery {
+  margin-bottom: 2rem;
+}
+
+.mechanical-system-section .side-by-side-container {
+  margin-bottom: 2rem;
+}
+
+.mechanical-system-section .detail-section {
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for system dividers */
+@media (max-width: 768px) {
+  .system-divider {
+    margin: 3rem 0;
+    padding: 1.5rem;
+  }
+  
+  .divider-image-gallery {
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .divider-image-gallery .gallery-image {
+    width: 200px;
+    height: 144px;
+  }
+  
+  .system-introduction-card {
+    padding: 1.5rem;
+  }
+  
+  .system-introduction-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .system-introduction-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .divider-image-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .divider-image-gallery .gallery-image {
+    width: 250px;
+    height: 180px;
+  }
+  
+  .system-divider {
+    margin: 2rem 0;
+    padding: 1rem;
+  }
+}
+
+/* Sub-Project Cards Styles */
+.sub-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.sub-project-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.sub-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sub-project-image {
+  width: 100%;
+  height: 275px;
+  overflow: hidden;
+}
+
+.sub-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Fine-tune crop for Chassis system card preview */
+.sub-project-image img.chassis-card-image {
+  object-position: center 60%;
+}
+
+
+.sub-project-content {
+  padding: 1.5rem;
+}
+
+.sub-project-content h3 {
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.sub-project-content p {
+  color: #666;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sub-project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sub-project-skills .skill-tag {
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+
+.sub-project-skills .skill-tag:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .sub-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .sub-project-content {
+    padding: 1rem;
+  }
+  
+  .sub-project-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .sub-project-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* PDF Container Styles */
+.pdf-container {
+  margin-bottom: 3rem;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pdf-controls {
+  padding: 1rem 1.5rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.download-button:hover {
+  color: #0056b3;
+}
+
+.download-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.pdf-viewer {
+  padding: 0;
+}
+
+.pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: none;
+} 

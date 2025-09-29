@@ -1,0 +1,173 @@
+.resume-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume-page h1 {
+  color: #141414;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.resume-content {
+  border-radius: 10px;
+  padding: 0.75rem 2rem 2rem 2rem;
+  min-height: 400px;
+}
+
+.resume-placeholder {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pdf-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.pdf-controls button {
+  padding: 0.5rem 1rem;
+  background: #8C1D40;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-controls button:hover:not(:disabled) {
+  background: #6b1630;
+}
+
+.pdf-controls button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.pdf-controls span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.download-button {
+  padding: 0.5rem 1rem;
+  background: #8C1D40;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.download-button:hover {
+  background: #e6b223;
+}
+
+.download-icon {
+  flex-shrink: 0;
+}
+
+.home-button {
+  padding: 0.5rem 1rem;
+  background: #555;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.home-button:hover {
+  background: #444;
+}
+
+.home-icon {
+  flex-shrink: 0;
+}
+
+.resume-page .pdf-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.resume-page .pdf-iframe {
+  width: 1120px;
+  height: 988px;
+  border: none;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .resume-page .pdf-iframe {
+    width: 100%;
+    height: 75vh;
+  }
+}
+
+.resume-page .pdf-viewer .react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-page .pdf-viewer .react-pdf__Page {
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #d32f2f;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .resume-page {
+    padding: 1rem;
+  }
+  
+  .resume-content {
+    padding: 1rem;
+  }
+  
+  .pdf-controls {
+    flex-wrap: wrap;
+  }
+} 
