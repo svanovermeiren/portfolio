@@ -21,6 +21,7 @@
 .navbar-title {
   font-size: 1.5rem;
   color: #FFC627;
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
 .navbar-right {
